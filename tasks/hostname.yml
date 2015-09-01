@@ -1,0 +1,6 @@
+---
+- name: Determine hostname
+  set_fact: hostname="{{inventory_hostname}}.dmz.betterplace.org"
+
+- name: Set hostname
+  hostname: name={{hostname}}

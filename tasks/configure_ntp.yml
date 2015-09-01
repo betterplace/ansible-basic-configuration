@@ -1,0 +1,12 @@
+---
+- name: Install ntp
+  yum: name=ntp state=installed
+
+- name: Put ntp.conf
+  copy: >
+    src=ntp.conf
+    dest=/etc/ntp.conf
+    owner=root
+    group=root
+    mode=0644
+  notify: restart ntpd
