@@ -1,5 +1,5 @@
 ---
-- name: Set selinux to permissive
-  selinux: >
+- name: Set selinux
+  selinux:
     policy=targeted
-    state=permissive
+    state={{basic_configurations_selinux_state}}
