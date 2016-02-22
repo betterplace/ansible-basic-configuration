@@ -1,6 +1,14 @@
 ---
 - name: Determine hostname
-  set_fact: hostname="{{inventory_hostname}}.dmz.betterplace.org"
+  set_fact: hostname="{{inventory_hostname}}"
+
+- name: Install /etc/sysconfig/network
+  template:
+    src=network.j2
+    dest=/etc/sysconfig/network
+    owner=root
+    group=root
+    mode=0644
 
 - name: Set hostname
   hostname: name={{hostname}}
