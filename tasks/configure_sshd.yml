@@ -1,0 +1,17 @@
+---
+- name: Install sshd
+  yum: name=openssh-server state=installed
+
+- name: Disable the explicit setting of ssh login with password
+  replace:
+    dest=/etc/ssh/sshd_config
+    regexp='^PasswordAuthentication yes'
+    replace='PasswordAuthentication no'
+  notify: reload sshd
+
+- name: "Disable ssh login with password (instead of the default)"
+  lineinfile:
+    dest=/etc/ssh/sshd_config
+    line='PasswordAuthentication no'
+  notify: reload sshd
+

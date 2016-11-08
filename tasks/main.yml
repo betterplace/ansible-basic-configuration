@@ -5,3 +5,4 @@
 - include: selinux.yml
 - include: disable_iptables.yml
 - include: configure_ntp.yml
+- include: configure_sshd.yml
