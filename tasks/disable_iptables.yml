@@ -1,6 +1,0 @@
----
-- name: Disable iptables
-  service: name={{item}} state=stopped enabled=no
-  with_items:
-    - iptables
-    - ip6tables

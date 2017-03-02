@@ -1,8 +1,6 @@
 ---
-- include: disable_ipv6.yml
 - include: hostname.yml
 - include: resolv.conf.yml
 - include: selinux.yml
-- include: disable_iptables.yml
 - include: configure_ntp.yml
 - include: configure_sshd.yml
