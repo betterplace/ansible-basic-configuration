@@ -1,8 +1,8 @@
 ---
-- include: disable_ipv6.yml
-- include: hostname.yml
-- include: resolv.conf.yml
-- include: selinux.yml
-- include: disable_iptables.yml
-- include: configure_ntp.yml
-- include: configure_sshd.yml
+- import_tasks: disable_ipv6.yml
+- import_tasks: hostname.yml
+- import_tasks: resolv.conf.yml
+- import_tasks: selinux.yml
+- import_tasks: disable_iptables.yml
+- import_tasks: configure_ntp.yml
+- import_tasks: configure_sshd.yml
